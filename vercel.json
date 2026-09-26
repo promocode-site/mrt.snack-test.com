@@ -1,7 +1,5 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm install && vite build && node scripts/prerender.mjs",
-  "installCommand": "npm i -g pnpm && pnpm install",
-  "outputDirectory": "dist/public",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "framework": null
 }
