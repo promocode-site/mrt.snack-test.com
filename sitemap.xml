@@ -66,4 +66,12 @@
     <mobile:mobile/>
   </url>
 
+  <url>
+    <loc>https://mrt.snack-test.com/blog/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
+  <url>
+    <loc>https://mrt.snack-test.com/blog/myrealtrip-flight-discount-coupon-review/</loc>
+    <lastmod>2026-09-26</lastmod>
+  </url>
 </urlset>
