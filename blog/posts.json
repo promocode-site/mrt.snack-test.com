@@ -3,8 +3,15 @@
   "siteName": "마이리얼트립 할인쿠폰",
   "baseUrl": "https://mrt.snack-test.com",
   "postUrlPattern": "/blog/{slug}/",
-  "updated": "2026-09-26",
+  "updated": "2026-09-29",
   "posts": [
+    {
+      "title": "마이리얼트립 할인쿠폰 결제 금액별로 고르는 법",
+      "slug": "myrealtrip-coupon-by-payment-amount",
+      "date": "2026-09-29",
+      "description": "마이리얼트립 할인쿠폰을 결제 금액 구간별로 고르는 방법을 정리했습니다. 소액 결제부터 고액 패키지 결제까지 상황에 맞는 코드 선택 기준을 확인해보세요.",
+      "image": ""
+    },
     {
       "title": "마이리얼트립 항공권 할인쿠폰 적용해본 후기",
       "slug": "myrealtrip-flight-discount-coupon-review",
