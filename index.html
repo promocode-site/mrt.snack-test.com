@@ -153,7 +153,14 @@ main>section{scroll-margin-top:64px}
 .elm-skip:focus{top:12px}
 .elm-hd{background:#14171A;color:#fff}
 .elm-in{max-width:1100px;margin:0 auto;padding:22px 20px 26px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px 28px;align-items:end}
-.elm-logo{grid-column:1/-1;display:inline-flex;align-items:center;gap:10px;justify-self:start;color:#fff;text-decoration:none;font-weight:800;font-size:15px}
+.elm-logo{grid-column:1;display:inline-flex;align-items:center;gap:10px;justify-self:start;color:#fff;text-decoration:none;font-weight:800;font-size:15px}
+.elm-pnav{grid-column:2;grid-row:1;justify-self:end;min-width:0;max-width:100%}
+.elm-pnav ul{display:flex;gap:6px;margin:0;padding:0;list-style:none;overflow-x:auto;scrollbar-width:none}
+.elm-pnav ul::-webkit-scrollbar{display:none}
+.elm-pnav a{display:block;padding:6px 12px;border:2px solid #fff;border-radius:6px;color:#fff;font-size:13px;font-weight:800;text-decoration:none;white-space:nowrap}
+.elm-pnav a:hover{background:#2E3439}
+.elm-pnav a[aria-current="page"]{background:#fff;color:#14171A}
+.elm-pnav a:focus-visible{outline:3px solid #FBBA00;outline-offset:2px}
 .elm-lb{display:grid;gap:2px;width:34px}
 .elm-lb i{display:block;height:3px;background:var(--g)}
 .elm-lb i:nth-child(1){width:46%}.elm-lb i:nth-child(2){width:55%}.elm-lb i:nth-child(3){width:64%}.elm-lb i:nth-child(4){width:73%}.elm-lb i:nth-child(5){width:82%}.elm-lb i:nth-child(6){width:91%}.elm-lb i:nth-child(7){width:100%}
@@ -190,7 +197,9 @@ main .elb-sec,main .elc-sec,main .elp-sec,main .elh-sec,main .elf-sec{padding-to
 .elm-fin ul{margin:0;padding:0;list-style:none;display:grid;gap:4px}
 .elm-fin a{color:#E6EAED;text-decoration:underline;text-underline-offset:3px}
 .elm-copy{max-width:1100px;margin:0 auto;padding:12px 20px 26px;font-size:12px;color:#8E979F}
-@media (max-width:860px){.elm-in{grid-template-columns:minmax(0,1fr)}.elm-kpi{grid-row:auto;grid-column:1}.elm-fin{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.elm-fabout{grid-column:1/-1}}
+.elm-flinks{grid-column:1/-1;padding-top:18px;border-top:1px solid #2E3439}
+.elm-fin .elm-flinks ul{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:4px 16px}
+@media (max-width:860px){.elm-pnav{grid-column:1;grid-row:auto;justify-self:start}.elm-in{grid-template-columns:minmax(0,1fr)}.elm-kpi{grid-row:auto;grid-column:1}.elm-fin{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.elm-fabout{grid-column:1/-1}}
 @media (max-width:560px){.elm-hd h1{font-size:26px}.elm-in{padding:18px 14px 22px}.elm-nin{padding:0 0 0 8px}.elm-ncta{margin-right:8px}.elm-nav li a{padding:13px 9px;font-size:13px}.elm-div{padding:0 14px;gap:10px}.elm-dn{font-size:30px}.elm-kpi dd{font-size:17px}.elm-fin{grid-template-columns:minmax(0,1fr);padding:26px 14px 8px}.elm-copy{padding:10px 14px 22px}}
 
 .elb-sec{--ink:#14171A;--line:#C5CBD1;--soft:#F2F4F3;--mute:#5B636B;--pt:#00843D;--gA:#00843D;--gB:#52AE32;--gC:#C8D400;--gD:#FFED00;--gE:#FBBA00;--gF:#EB6909;--gG:#E30613;max-width:1100px;margin:0 auto;padding:40px 20px 56px;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR",sans-serif;font-size:15px;line-height:1.6;word-break:keep-all;overflow-wrap:anywhere;box-sizing:border-box}
@@ -632,6 +641,7 @@ main .elb-sec,main .elc-sec,main .elp-sec,main .elh-sec,main .elf-sec{padding-to
 <header class="elm-hd" id="top">
 <div class="elm-in">
 <a class="elm-logo" href="https://mrt.snack-test.com/"><span class="elm-lb" aria-hidden="true"><i class="elm-gA"></i><i class="elm-gB"></i><i class="elm-gC"></i><i class="elm-gD"></i><i class="elm-gE"></i><i class="elm-gF"></i><i class="elm-gG"></i></span><span>마이리얼트립 할인쿠폰</span></a>
+<nav class="elm-pnav" aria-label="사이트 메뉴"><ul><li><a href="./" aria-current="page">홈</a></li><li><a href="promo-code/">마이리얼트립 할인코드</a></li></ul></nav>
 <h1>마이리얼트립 할인쿠폰 결제 금액별 모음</h1>
 <p class="elm-desc">마이리얼트립 할인쿠폰과 할인코드, 카드·간편결제 할인을 결제 금액에 따라 실제 할인율로 비교했습니다.</p>
 <dl class="elm-kpi">
@@ -1445,7 +1455,7 @@ main .elb-sec,main .elc-sec,main .elp-sec,main .elh-sec,main .elf-sec{padding-to
 .upd-log-list li{display:flex;gap:14px;align-items:baseline;padding:11px 0;border-top:1px solid rgba(var(--upd-rgb),.14)}
 .upd-log-list li:first-child{border-top:0}
 .upd-log-list time{flex:0 0 auto;font:800 12.5px/1.6 ui-monospace,Menlo,Consolas,monospace;color:var(--upd-c)}
-.upd-log-list p{font-size:14px;line-height:1.6}
+.upd-log-list p{font-size:14px;line-height:1.6;overflow-wrap:anywhere}
 @media (max-width:640px){.upd-log-title{font-size:19px}.upd-log-list li{flex-direction:column;gap:2px}}
 </style>
 </main>
@@ -1459,6 +1469,9 @@ main .elb-sec,main .elc-sec,main .elp-sec,main .elh-sec,main .elf-sec{padding-to
 <div><p class="elm-fh">마이리얼트립 할인 정보</p><ul><li><a href="#mrt-coupon">마이리얼트립 할인쿠폰</a></li><li><a href="#mrt-code">마이리얼트립 할인코드</a></li><li><a href="#mrt-card">마이리얼트립 카드 할인 쿠폰</a></li><li><a href="#mrt-howto">마이리얼트립 사용방법</a></li><li><a href="#mrt-faq">마이리얼트립 FAQ</a></li></ul></div>
 <div><p class="elm-fh">마이리얼트립 바로가기</p><ul><li><a href="https://www.myrealtrip.com/" target="_blank" rel="noopener">마이리얼트립 공식 홈페이지</a></li><li><a href="https://myrealt.rip/aRT258" target="_blank" rel="nofollow sponsored noopener">마이리얼트립 할인쿠폰 발급</a></li><li><a href="#top">맨 위로</a></li>
 <li><a href="/blog/">할인 정보 블로그</a></li></ul></div>
+<!--@FOOTER-LINKS-->
+<div class="elm-flinks"><p class="elm-fh">다른 할인코드</p><ul><li><a href="tripcom/">트립닷컴 할인코드</a></li><li><a href="klook/">클룩 할인코드</a></li><li><a href="agoda/">아고다 할인코드</a></li><li><a href="hotelscom/">호텔스닷컴 할인코드</a></li><li><a href="kkday/">kkday 할인코드</a></li><li><a href="rakutentravel/">라쿠텐트래블 할인코드</a></li><li><a href="usimsa/">유심사 할인쿠폰</a></li><li><a href="cos/">COS 프로모션코드</a></li><li><a href="ssense/">ssense 할인코드</a></li><li><a href="nike/">나이키 프로모션코드</a></li><li><a href="netaporter/">네타포르테 할인코드</a></li><li><a href="lululemon/">룰루레몬 프로모션코드</a></li><li><a href="mytheresa/">마이테레사 할인코드</a></li><li><a href="cet/">세타이어 할인코드</a></li><li><a href="adidas/">아디다스 프로모션코드</a></li><li><a href="arket/">아르켓 할인코드</a></li><li><a href="alo/">알로 할인코드</a></li><li><a href="andotherstories/">앤아더스토리즈 할인코드</a></li><li><a href="yoox/">육스 할인코드</a></li><li><a href="casetify/">케이스티파이 할인코드</a></li><li><a href="farfetch/">파페치 할인코드</a></li><li><a href="nordvpn/">노드 vpn 쿠폰</a></li><li><a href="lenovo/">레노버 할인</a></li><li><a href="speak/">스픽 할인</a></li><li><a href="clubclio/">클럽클리오 할인</a></li></ul></div>
+<!--@/FOOTER-LINKS-->
 </div>
 <p class="elm-copy">© 마이리얼트립 할인쿠폰</p>
 </footer>
